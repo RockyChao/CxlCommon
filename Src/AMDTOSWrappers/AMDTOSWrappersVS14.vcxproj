@@ -76,28 +76,7 @@
     <Import Project="$(AMDTCommonAMD)\APPSDK\Global-OpenCL-NoLib.props" />
     <Import Project="$(AMDTCommonEXT)\tinyxml\Global-TinyXML-2015.props" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(CommonDir)\Lib\Ext\Boost\Global-Boost-2015.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(CommonDir)\Lib\Ext\Boost\Global-Boost-2015.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug_Static|Win32'">
-    <Import Project="$(CommonDir)\Lib\Ext\Boost\Global-Boost-2015.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug_Static|x64'">
-    <Import Project="$(CommonDir)\Lib\Ext\Boost\Global-Boost-2015.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(CommonDir)\Lib\Ext\Boost\Global-Boost-2015.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(CommonDir)\Lib\Ext\Boost\Global-Boost-2015.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
-    <Import Project="$(CommonDir)\Lib\Ext\Boost\Global-Boost-2015.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release_Static|x64'">
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(CommonDir)\Lib\Ext\Boost\Global-Boost-2015.props" />
   </ImportGroup>
   <PropertyGroup>
