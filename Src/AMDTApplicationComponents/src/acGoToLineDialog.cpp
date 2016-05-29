@@ -14,8 +14,15 @@
 
 
 //------------------------------ acGoToLineDialog.cpp ------------------------------
+
 acGoToLineDialog::acGoToLineDialog(QWidget* pParent, unsigned int numLines) : acDialog(pParent)
 {
+    // remove context help button
+    Qt::WindowFlags flags = windowFlags();
+    Qt::WindowFlags helpFlag = Qt::WindowContextHelpButtonHint;
+    flags = flags & (~helpFlag);
+    setWindowFlags(flags);
+
     m_pPushButtonOK = new QPushButton("OK");
     m_pPushButtonCancel = new QPushButton("Cancel");
 
@@ -30,6 +37,8 @@ acGoToLineDialog::acGoToLineDialog(QWidget* pParent, unsigned int numLines) : ac
 
     QValidator *inputRange = new QIntValidator(0, numLines - 1, this);
     m_pLineEdit->setValidator(inputRange);
+    m_pLineEdit->setFocus();
+    m_pLineEdit->selectAll();
 
     m_pButtonBox = new QHBoxLayout;
 
