@@ -39,7 +39,7 @@ apCLImage::apCLImage(gtInt32 textureName):
 // ---------------------------------------------------------------------------
 apCLImage::apCLImage(int imageName, apTextureType imageType, gtSize_t width, gtSize_t height, gtSize_t depth):
     apCLMemObject(), _imageName(imageName), _imageType(imageType), _clDataFormat(0), _clDataType(0),
-    _contextHandle(OA_CL_NULL_HANDLE), _width(width), _height(height), _depth(depth), _imageFilePath(L""), _isDirty(true),
+    _contextHandle(OA_CL_NULL_HANDLE), _width(width), _height(height), _depth(depth), _buffer(OA_CL_NULL_HANDLE), _imageFilePath(L""), _isDirty(true),
     _openGLRenderBufferName(0), _openGLTextureName(0), _openGLMiplevel(0), _openGLTarget(0), _openGLSpyId(0)
 {
 }
