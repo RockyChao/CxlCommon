@@ -64,7 +64,7 @@ static int PwrInitializeSharedBuffer(void)
         PACL pSacl = nullptr;  // not allocated
         BOOL fSaclPresent = FALSE;
         BOOL fSaclDefaulted = FALSE;
-        char secDesc[ SECURITY_DESCRIPTOR_MIN_LENGTH ];
+        char secDesc[ SECURITY_DESCRIPTOR_MIN_LENGTH ] = "";
 
         secAttr.nLength = sizeof(secAttr);
         secAttr.bInheritHandle = FALSE;
