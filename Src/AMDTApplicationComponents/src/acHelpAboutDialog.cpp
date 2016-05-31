@@ -109,8 +109,6 @@ void acHelpAboutDialog::Init(const QString& title, const QString& productName, c
         helpAboutString.append(acGTStringToQString(driverVersion));
     }
 
-    helpAboutString.append(AC_STR_NewLineA AC_STR_NewLineA AC_STR_HelpAboutCopyright);
-
     m_pCompanyLogo = new QPixmap(acGTStringToQString(companyLogoBitmapString), nullptr, Qt::AutoColor);
 
 

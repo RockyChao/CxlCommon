@@ -287,7 +287,6 @@
 #define AC_STR_HelpAboutGLCLTitle " About "
 #define AC_STR_HelpAboutVersion "Version: "
 #define AC_STR_HelpAboutRadeonSoftwareVersion "Radeon Software version: "
-#define AC_STR_HelpAboutCopyright "\xC2\xA9 2016 Advanced Micro Devices, Inc. All Rights Reserved."
 #define AC_STR_HelpAboutWebPageText "gpuopen.com"
 #define AC_STR_HelpAboutWebPage "http://gpuopen.com/"
 //#define AC_STR_HelpAboutLGPLCopyRightCaption "LGPL Components:"
