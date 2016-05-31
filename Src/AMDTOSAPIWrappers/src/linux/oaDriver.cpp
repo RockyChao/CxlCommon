@@ -181,6 +181,7 @@ OA_API gtString oaGetDriverVersion(int& driverError)
     return driverVersion;
 }
 
+#if CODEXL_HSA_SUPPORT
 // HSA only supported on 64-bit configurations:
 #if AMDT_ADDRESS_SPACE_TYPE == AMDT_32_BIT_ADDRESS_SPACE
 OA_API bool oaIsHSADriver()
@@ -244,3 +245,16 @@ OA_API bool oaGetHSADeviceIds(gtVector<gtUInt32>& deviceIDs)
 #else // AMDT_ADDRESS_SPACE_TYPE
 #error Unknown Address space type!
 #endif // AMDT_ADDRESS_SPACE_TYPE
+#else // CODEXL_HSA_SUPPORT
+OA_API bool oaIsHSADriver()
+{
+    return false;
+}
+
+OA_API bool oaGetHSADeviceIds(gtVector<gtUInt32>& deviceIDs)
+{
+    GT_UNREFERENCED_PARAMETER(deviceIDs);
+
+    return false;
+}
+#endif

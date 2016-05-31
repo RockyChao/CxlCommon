@@ -54,7 +54,7 @@ sources = \
 ]
 
 # Common/Src (HSA is not supported on 32-bit):
-if (env['CXL_arch'] != 'x86'):
+if (env['CXL_arch'] != 'x86' and env['CXL_hsa'] == 'true'):
     sources += \
     [
          env['CXL_common_dir'] + "/Src/HSAUtils/HSAUtils.cpp",

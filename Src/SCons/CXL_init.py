@@ -69,6 +69,13 @@ def initCXLVars (CXL_vars) :
         default = '',
         allowed_values = ('', 'static')))
 
+    # CxL support for hsa
+    CXL_vars.Add(
+        key = 'CXL_hsa',
+        help = 'Support hsa',
+        default = '',
+        allowed_values = ('true', ''))
+
 
 def initArch (env) :
     arch = env['CXL_arch']
@@ -196,6 +203,10 @@ def initCompilerFlags (env) :
         compiler_base_flags += ' -DGDT_INTERNAL '
     else:
         compiler_base_flags += ' -DGDT_PUBLIC '
+
+    # add the support for HSA
+    if (env['CXL_hsa'] == 'true'):
+        compiler_base_flags += ' -DCODEXL_HSA_SUPPORT '
 
     env.Prepend(CPPFLAGS = compiler_base_flags)
     env.Prepend(LINKFLAGS = linker_base_flags)
