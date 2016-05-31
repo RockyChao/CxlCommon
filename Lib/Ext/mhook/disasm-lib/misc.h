@@ -41,6 +41,7 @@ extern "C" {
 #endif
 
 #define VALID_ADDRESS_MIN 0x10000    // Win32 specific
+//TODO refactor below gives always false, see https://msdn.microsoft.com/en-us/library/8dat2ecs.aspx
 #define IS_VALID_ADDRESS(a) IS_IN_RANGE(a, VALID_ADDRESS_MIN, VALID_ADDRESS_MAX+1)
 
 BOOL IsHexChar(BYTE ch);
