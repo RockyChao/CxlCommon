@@ -298,7 +298,7 @@ bool gtString::isEmpty() const
 // ---------------------------------------------------------------------------
 gtString& gtString::makeEmpty()
 {
-    _impl.operator = (L"");
+    _impl.clear();
 
     return *this;
 }
