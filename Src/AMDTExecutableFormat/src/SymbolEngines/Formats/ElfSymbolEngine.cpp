@@ -325,7 +325,7 @@ bool ElfSymbolEngine::ProcessRelPltSection(
                 // demangle the symbol name and prepend [PLT]
                 wchar_t* dmName = DemangleNameIA(pName);
                 size_t len = 6 + wcslen(dmName) + 1;
-                wchar_t* funcName = new wchar_t[len];
+                wchar_t* funcName = new wchar_t[len]();
                 wcscpy(funcName, L"[PLT] ");
                 wcscat(funcName, dmName);
 
