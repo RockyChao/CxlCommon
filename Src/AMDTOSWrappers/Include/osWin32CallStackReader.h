@@ -35,6 +35,7 @@ public:
     osWin32CallStackReader(osProcessHandle hProcess, osThreadHandle hThread, osCallStack& callStack);
     osWin32CallStackReader(osProcessHandle hProcess, CONTEXT* pThreadExecutionContext, osCallStack& callStack);
     bool execute(bool hideSpyDLLsFunctions = true);
+    void setMaxFrameCount(int frameCount) { m_maxFrames = frameCount; };
 
 private:
     void setStackAddressSpaceType();
@@ -63,6 +64,9 @@ private:
 
     // Are we reading the current thread's calls stack:
     bool _isReadingCurrentThread;
+
+    // Maximal number of frames allowed in the call stack:
+    int m_maxFrames;
 };
 
 

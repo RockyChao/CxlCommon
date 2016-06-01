@@ -81,7 +81,7 @@ DWORD_PTR GetAddressOfProgramCounter()
 // ---------------------------------------------------------------------------
 osWin32CallStackReader::osWin32CallStackReader(osCallStack& callStack)
     : _debugInfoReader(GetCurrentProcess()), _hProcess(GetCurrentProcess()), _hThread(GetCurrentThread()), _pThreadExecutionContext(NULL),
-      _callStack(callStack), _isReadingCurrentThread(true)
+      _callStack(callStack), _isReadingCurrentThread(true), m_maxFrames(OS_MAX_CALL_STACK_DEPTH)
 {
 
 }
@@ -98,7 +98,7 @@ osWin32CallStackReader::osWin32CallStackReader(osCallStack& callStack)
 osWin32CallStackReader::osWin32CallStackReader(osProcessHandle hProcess, osThreadHandle hThread,
                                                osCallStack& callStack)
     : _debugInfoReader(hProcess), _hProcess(hProcess), _hThread(hThread), _pThreadExecutionContext(NULL),
-      _callStack(callStack), _isReadingCurrentThread(false)
+      _callStack(callStack), _isReadingCurrentThread(false), m_maxFrames(OS_MAX_CALL_STACK_DEPTH)
 {
 }
 
@@ -116,7 +116,7 @@ osWin32CallStackReader::osWin32CallStackReader(osProcessHandle hProcess, osThrea
 // ---------------------------------------------------------------------------
 osWin32CallStackReader::osWin32CallStackReader(osProcessHandle hProcess, CONTEXT* pThreadExecutionContext, osCallStack& callStack)
     : _debugInfoReader(hProcess), _hProcess(hProcess), _hThread(NULL), _pThreadExecutionContext(pThreadExecutionContext),
-      _callStack(callStack), _isReadingCurrentThread(false)
+      _callStack(callStack), _isReadingCurrentThread(false), m_maxFrames(OS_MAX_CALL_STACK_DEPTH)
 {
 }
 
@@ -147,8 +147,18 @@ bool osWin32CallStackReader::execute(bool hideSpyDLLsFunctions)
     }
 
     // prepare the window frames Stack
+    int maxStackSize = m_maxFrames;
+    if (OS_MAX_CALL_STACK_DEPTH < maxStackSize)
+    {
+        maxStackSize = OS_MAX_CALL_STACK_DEPTH;
+    }
+    else if (1 > maxStackSize)
+    {
+        maxStackSize = 1;
+    }
+
     gtVector<STACKFRAME64> winStackFrames;
-    winStackFrames.resize(OS_MAX_CALL_STACK_DEPTH);
+    winStackFrames.resize(maxStackSize);
 
     // Set the call stack's address size:
     setStackAddressSpaceType();
@@ -307,7 +317,7 @@ bool osWin32CallStackReader::execute(bool hideSpyDLLsFunctions)
                 // If we passed the call stack depth limitation - exit the StackWalk loop:
                 currentCallStackDepth++;
 
-                if (currentCallStackDepth >= OS_MAX_CALL_STACK_DEPTH)
+                if (currentCallStackDepth >= maxStackSize)
                 {
                     break;
                 }
@@ -328,7 +338,11 @@ bool osWin32CallStackReader::execute(bool hideSpyDLLsFunctions)
             void* callers[OS_MAX_CALL_STACK_DEPTH];
 
             // but the sum of 0 + kMaxCallers will be less then the limit based on system
-            int callersCount = RtlCaptureStackBackTrace(0, kMaxCallers, callers, NULL);
+            if (kMaxCallers < maxStackSize)
+            {
+                maxStackSize = kMaxCallers;
+            }
+            int callersCount = RtlCaptureStackBackTrace(0, maxStackSize, callers, NULL);
 
             // Copy the win stack frames to our stack frame
             // First clear the old useless stack
@@ -352,7 +366,6 @@ bool osWin32CallStackReader::execute(bool hideSpyDLLsFunctions)
 
         // Set initial size to the right one:
         _callStack.reserveStack(winStackFrameSize);
-
 
         for (int iFrame = 0 ; iFrame < winStackFrameSize ; iFrame++)
         {
