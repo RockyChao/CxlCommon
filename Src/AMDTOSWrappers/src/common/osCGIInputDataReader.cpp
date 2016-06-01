@@ -491,7 +491,7 @@ bool osCGIInputDataReader::decodeFormRequestString(const gtString& encodedString
     if (0 < encodedStringLength)
     {
         // Allocate space for the decoded string:
-        wchar_t* pDecodedString = new wchar_t[encodedStringLength + 1];
+        wchar_t* pDecodedString = new wchar_t[encodedStringLength + 1]();
 
 
         // Initialize the decoded string to be the encoded string:
