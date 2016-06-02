@@ -437,6 +437,7 @@ bool apOpenGLExtensionsIdToString(apOpenGLExtensionsId extensionId, gtString& ex
 
         case AP_GL_NV_shader_buffer_load:
             extensionString = L"GL_NV_shader_buffer_load";
+			break;
 
         case AP_GL_NV_vertex_buffer_unified_memory:
             extensionString = L"GL_NV_vertex_buffer_unified_memory";

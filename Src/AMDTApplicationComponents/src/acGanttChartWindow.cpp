@@ -1110,11 +1110,6 @@ void acGanttChartWindow::beforeResize()
         _numberOfLinesShown = 1;
     }
 
-    if (_numberOfLinesShown > _numberOfChartLines)
-    {
-        _numberOfLinesShown = _numberOfLinesShown;
-    }
-
     // Update the V scrollbar:
     updateScrollbarRangeAndPosition();
 
@@ -1602,11 +1597,6 @@ void acGanttChartWindow::calculateDataLines()
 
     // Note how many lines we have in total:
     _numberOfChartLines = firstFreeLine;
-
-    if (_numberOfLinesShown > _numberOfChartLines)
-    {
-        _numberOfLinesShown = _numberOfLinesShown;
-    }
 
     // Calculate the width of the labels area:
     if (longestSeriesLabelLength > 0)
