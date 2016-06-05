@@ -41,15 +41,19 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(AMDTOutputDir)$(Configuration)\bin\$(ProjectName)\bin\$(GDTPlatform)\</OutDir>
     <ExtensionsToDeleteOnClean>$(ExtensionsToDeleteOnClean);$(CodeAnalysisLogFile);$(CodeAnalysisSucceededFile)</ExtensionsToDeleteOnClean>
+    <TargetName>CXLActivityLogger$(GDTPlatformSuffix)$(GDTDebugSuffix)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(AMDTOutputDir)$(Configuration)\bin\$(ProjectName)\bin\$(GDTPlatform)\</OutDir>
+    <TargetName>CXLActivityLogger$(GDTPlatformSuffix)$(GDTDebugSuffix)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(AMDTOutputDir)$(Configuration)\bin\$(ProjectName)\bin\$(GDTPlatform)\</OutDir>
+    <TargetName>CXLActivityLogger$(GDTPlatformSuffix)$(GDTDebugSuffix)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(AMDTOutputDir)$(Configuration)\bin\$(ProjectName)\bin\$(GDTPlatform)\</OutDir>
+    <TargetName>CXLActivityLogger$(GDTPlatformSuffix)$(GDTDebugSuffix)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
