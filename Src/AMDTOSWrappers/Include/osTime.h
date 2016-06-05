@@ -39,6 +39,7 @@ public:
         FOR_EMAIL,
         NAME_SCHEME_DISPLAY,
         NAME_SCHEME_FILE,
+        NAME_SCHEME_SHORT_FILE,
         DATE_TIME_DISPLAY
     };
 

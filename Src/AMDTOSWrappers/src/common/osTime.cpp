@@ -406,6 +406,7 @@ bool osTime::setFromDateTimeString(TimeZone timeZone, const gtString& dateTime, 
         case SLASH_SAPERATOR:
         case FOR_EMAIL:
         case NAME_SCHEME_DISPLAY:
+        case NAME_SCHEME_SHORT_FILE:
         case DATE_TIME_DISPLAY:
             return false;
     }
@@ -647,6 +648,18 @@ void osTime::dateAsString(gtString& dateString, TimeFormat stringFormat, TimeZon
                      timeAtTimeZone.tm_hour,
                      timeAtTimeZone.tm_min,
                      timeAtTimeZone.tm_sec);
+
+            dateString.append(dateAsString);
+        }
+        break;
+
+        case NAME_SCHEME_SHORT_FILE:
+        {
+            swprintf(dateAsString, GT_STRING_BUFF_SIZE, L"%ls-%02d-%4d_%02d-%02d",
+                intToShortMonthWideString[timeAtTimeZone.tm_mon],
+                timeAtTimeZone.tm_mday, (timeAtTimeZone.tm_year + 1900),
+                timeAtTimeZone.tm_hour,
+                timeAtTimeZone.tm_min);
 
             dateString.append(dateAsString);
         }
