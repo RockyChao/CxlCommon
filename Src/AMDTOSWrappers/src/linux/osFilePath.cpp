@@ -426,7 +426,7 @@ bool osFilePath::Rename(const gtString& newNameFullPath)
     // Check if the new path exists already
     if (rc)
     {
-        newFilePath.setFileDirectory(newNameFullPath);
+        newFilePath.setFullPathFromString(newNameFullPath);
         rc = !newFilePath.exists();
     }
 
