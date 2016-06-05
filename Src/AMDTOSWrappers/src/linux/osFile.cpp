@@ -84,6 +84,18 @@ bool osCopyFile(const osFilePath& sourcePath, const osFilePath& destinationPath,
         return retVal;
     }
 
+    // do a check on a none const version of the file paths
+    osFilePath copySrc(sourcePath);
+    osFilePath copyDest(destinationPath);
+
+    copySrc.resolveToAbsolutePath();
+    copyDest.resolveToAbsolutePath();
+    if (copySrc == copyDest)
+    {
+        retVal = true;
+        return retVal;
+    }
+
     // Check if exist and writable
     if (destinationPath.isRegularFile())
     {
