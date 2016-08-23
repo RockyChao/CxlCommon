@@ -34,3 +34,6 @@
 [submodule "Src/ShaderUtils"]
 	path = Src/ShaderUtils
 	url = ../common-src-ShaderUtils.git
+[submodule "Src/AmdDxExt"]
+	path = Src/AmdDxExt
+	url = ../common-src-AmdDxExt.git
