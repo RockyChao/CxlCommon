@@ -40,3 +40,6 @@
 [submodule "Src/AMDTActivityLogger"]
 	path = Src/AMDTActivityLogger
 	url = ../common-src-AMDTActivityLogger.git
+[submodule "Src/AMDTAPIClasses"]
+	path = Src/AMDTAPIClasses
+	url = ../common-src-AMDTAPIClasses.git
