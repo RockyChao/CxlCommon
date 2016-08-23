@@ -37,3 +37,6 @@
 [submodule "Src/AmdDxExt"]
 	path = Src/AmdDxExt
 	url = ../common-src-AmdDxExt.git
+[submodule "Src/AMDTActivityLogger"]
+	path = Src/AMDTActivityLogger
+	url = ../common-src-AMDTActivityLogger.git
