@@ -1,0 +1,30 @@
+[submodule "Src/AMDTBaseTools"]
+	path = Src/AMDTBaseTools
+	url = https://github.com/GPUOpen-Tools/common-src-AMDTBaseTools.git
+[submodule "Src/AMDTOSWrappers"]
+	path = Src/AMDTOSWrappers
+	url = https://github.com/GPUOpen-Tools/common-src-AMDTOSWrappers.git
+[submodule "Src/AMDTOSAPIWrappers"]
+	path = Src/AMDTOSAPIWrappers
+	url = https://github.com/GPUOpen-Tools/common-src-AMDTOSAPIWrappers.git
+[submodule "Src/DeviceInfo"]
+	path = Src/DeviceInfo
+	url = https://github.com/GPUOpen-Tools/common-src-DeviceInfo.git
+[submodule "Src/AMDTMutex"]
+	path = Src/AMDTMutex
+	url = https://github.com/GPUOpen-Tools/common-src-AMDTMutex.git
+[submodule "Src/ADLUtil"]
+	path = Src/ADLUtil
+	url = https://github.com/GPUOpen-Tools/common-src-ADLUtil.git
+[submodule "Src/GPUPerfAPIUtils"]
+	path = Src/GPUPerfAPIUtils
+	url = https://github.com/GPUOpen-Tools/common-src-GPUPerfAPIUtils.git
+[submodule "Src/TSingleton"]
+	path = Src/TSingleton
+	url = https://github.com/GPUOpen-Tools/common-src-TSingleton.git
+[submodule "Src/Vsprops"]
+	path = Src/Vsprops
+	url = https://github.com/GPUOpen-Tools/common-src-Vsprops.git
+[submodule "Src/DynamicLibraryModule"]
+	path = Src/DynamicLibraryModule
+	url = https://github.com/GPUOpen-Tools/common-src-DynamicLibraryModule.git
