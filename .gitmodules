@@ -43,3 +43,21 @@
 [submodule "Src/AMDTAPIClasses"]
 	path = Src/AMDTAPIClasses
 	url = ../common-src-AMDTAPIClasses.git
+[submodule "Src/AMDTApplication"]
+	path = Src/AMDTApplication
+	url = ../common-src-AMDTApplication.git
+[submodule "Src/AMDTApplicationComponents"]
+	path = Src/AMDTApplicationComponents
+	url = ../common-src-AMDTApplicationComponents.git
+[submodule "Src/AMDTAssertionHandlers"]
+	path = Src/AMDTAssertionHandlers
+	url = ../common-src-AMDTAssertionHandlers/
+[submodule "Src/AMDTInterceptor"]
+	path = Src/AMDTInterceptor
+	url = ../common-src-AMDTInterceptor
+[submodule "Src/CElf"]
+	path = Src/CElf
+	url = ../common-src-CElf.git
+[submodule "Src/DDS"]
+	path = Src/DDS
+	url = ../common-src-DDS.git
