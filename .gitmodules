@@ -61,3 +61,15 @@
 [submodule "Src/DDS"]
 	path = Src/DDS
 	url = ../common-src-DDS.git
+[submodule "Src/DebugHelpers"]
+	path = Src/DebugHelpers
+	url = ../common-src-DebugHelpers.git
+[submodule "Src/Miniz"]
+	path = Src/Miniz
+	url = ../common-src-Miniz.git
+[submodule "Src/VersionInfo"]
+	path = Src/VersionInfo
+	url = ../common-src-VersionInfo.git
+[submodule "Src/Vulkan"]
+	path = Src/Vulkan
+	url = ../common-src-Vulkan.git
