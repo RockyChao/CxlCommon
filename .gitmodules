@@ -97,3 +97,6 @@
 [submodule "Lib/Ext/Windows-Kits"]
 	path = Lib/Ext/Windows-Kits
 	url = ../common-lib-ext-WindowsKits.git
+[submodule "Lib/Ext/OpenCV"]
+	path = Lib/Ext/OpenCV
+	url = ../common-lib-ext-OpenCV-2.49.git
