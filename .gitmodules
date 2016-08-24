@@ -100,3 +100,6 @@
 [submodule "Lib/Ext/OpenCV"]
 	path = Lib/Ext/OpenCV
 	url = ../common-lib-ext-OpenCV-2.49.git
+[submodule "Lib/Ext/OpenEXR"]
+	path = Lib/Ext/OpenEXR
+	url = ../common-lib-ext-OpenEXR-1.4.git
