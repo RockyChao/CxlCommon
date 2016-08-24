@@ -73,3 +73,27 @@
 [submodule "Src/Vulkan"]
 	path = Src/Vulkan
 	url = ../common-src-Vulkan.git
+[submodule "Src/SCons"]
+	path = Src/SCons
+	url = ../common-src-SCons.git
+[submodule "DK/Installer"]
+	path = DK/Installer
+	url = ../common-dk-Installer.git
+[submodule "Lib/AMD/ADL"]
+	path = Lib/AMD/ADL
+	url = ../common-lib-amd-ADL.git
+[submodule "Lib/AMD/APPSDK"]
+	path = Lib/AMD/APPSDK
+	url = ../common-lib-amd-APPSDK-3.0.git
+[submodule "Lib/Ext/GoogleTest"]
+	path = Lib/Ext/GoogleTest
+	url = ../common-lib-ext-GoogleTest-1.7.git
+[submodule "Lib/Ext/OpenGL"]
+	path = Lib/Ext/OpenGL
+	url = ../common-lib-ext-OpenGL.git
+[submodule "Lib/Ext/OpenGLES"]
+	path = Lib/Ext/OpenGLES
+	url = ../common-lib-ext-OpenGLES.git
+[submodule "Lib/Ext/Windows-Kits"]
+	path = Lib/Ext/Windows-Kits
+	url = ../common-lib-ext-WindowsKits.git
