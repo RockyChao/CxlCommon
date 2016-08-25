@@ -103,3 +103,6 @@
 [submodule "Lib/Ext/OpenEXR"]
 	path = Lib/Ext/OpenEXR
 	url = ../common-lib-ext-OpenEXR-1.4.git
+[submodule "Lib/Ext/Boost"]
+	path = Lib/Ext/Boost
+	url = ../common-lib-ext-Boost-1.59.git
