@@ -106,9 +106,6 @@
 [submodule "Lib/Ext/Boost"]
 	path = Lib/Ext/Boost
 	url = ../common-lib-ext-Boost-1.59.git
-[submodule "Lib/Ext/glew"]
-	path = Lib/Ext/glew
-	url = ../common-lib-ext-glew-1.7.git
 [submodule "Lib/Ext/tinyxml"]
 	path = Lib/Ext/tinyxml
 	url = ../common-lib-ext-tinyxml-2.6.2.git
