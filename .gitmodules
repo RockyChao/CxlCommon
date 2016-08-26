@@ -112,3 +112,6 @@
 [submodule "Lib/Ext/tinyxml"]
 	path = Lib/Ext/tinyxml
 	url = ../common-lib-ext-tinyxml-2.6.2.git
+[submodule "Lib/Ext/zlib"]
+	path = Lib/Ext/zlib
+	url = ../common-lib-ext-zlib-1.2.8.git
