@@ -118,3 +118,6 @@
 [submodule "Lib/Ext/Qt"]
 	path = Lib/Ext/Qt
 	url = ../common-lib-ext-Qt-5.5.git
+[submodule "Lib/Ext/QScintilla"]
+	path = Lib/Ext/QScintilla
+	url = ../common-lib-ext-QScintilla-2.8.git
