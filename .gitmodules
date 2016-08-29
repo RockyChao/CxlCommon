@@ -136,3 +136,6 @@
 [submodule "Lib/Ext/GRLibDWARF"]
 	path = Lib/Ext/GRLibDWARF
 	url = ../common-lib-ext-GRLibDWARF.git
+[submodule "Lib/Ext/libpng"]
+	path = Lib/Ext/libpng
+	url = ../common-lib-ext-libpng-1.6.19.git
