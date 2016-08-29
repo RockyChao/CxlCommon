@@ -133,3 +133,6 @@
 [submodule "Lib/Ext/utf8cpp"]
 	path = Lib/Ext/utf8cpp
 	url = ../common-lib-ext-utf8cpp.git
+[submodule "Lib/Ext/GRLibDWARF"]
+	path = Lib/Ext/GRLibDWARF
+	url = ../common-lib-ext-GRLibDWARF.git
