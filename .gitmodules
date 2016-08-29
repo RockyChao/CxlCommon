@@ -127,3 +127,6 @@
 [submodule "Lib/AMD/ACL"]
 	path = Lib/AMD/ACL
 	url = ../common-lib-AMD-ACL.git
+[submodule "Lib/AMD/CAL"]
+	path = Lib/AMD/CAL
+	url = ../common-lib-AMD-CAL-8.95.git
