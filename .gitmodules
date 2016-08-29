@@ -121,3 +121,6 @@
 [submodule "Lib/Ext/QScintilla"]
 	path = Lib/Ext/QScintilla
 	url = ../common-lib-ext-QScintilla-2.8.git
+[submodule "Lib/Ext/Vulkan"]
+	path = Lib/Ext/Vulkan
+	url = ../common-lib-ext-Vulkan-1.0.21.1.git
