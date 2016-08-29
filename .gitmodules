@@ -130,3 +130,6 @@
 [submodule "Lib/AMD/CAL"]
 	path = Lib/AMD/CAL
 	url = ../common-lib-AMD-CAL-8.95.git
+[submodule "Lib/Ext/utf8cpp"]
+	path = Lib/Ext/utf8cpp
+	url = ../common-lib-ext-utf8cpp.git
