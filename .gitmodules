@@ -142,3 +142,6 @@
 [submodule "Lib/Ext/mhook"]
 	path = Lib/Ext/mhook
 	url = ../common-lib-ext-mhook.git
+[submodule "Lib/AMD/AMDTCpuPerfEventUtils"]
+	path = Lib/AMD/AMDTCpuPerfEventUtils
+	url = ../common-lib-amd-AMDTCpuPerfEventUtils-1.0.git
